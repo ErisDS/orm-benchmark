@@ -19,7 +19,18 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+import Contact from 'App/Models/Contact'
 
 Route.get('/', async () => {
   return { hello: 'world' }
+})
+
+Route.get('/api/v1/lucid/contacts', async () => {
+  const contacts = await Contact
+    .query()
+    .preload('emails')
+    .preload('phones')
+    .preload('addresses')
+
+  return contacts
 })
