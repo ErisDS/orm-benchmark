@@ -19,6 +19,8 @@
   ],
   "providers": [
     "./providers/AppProvider",
+    "./providers/BookshelfProvider",
+    "./providers/ObjectionProvider",
     "@adonisjs/core",
     "@adonisjs/lucid"
   ],

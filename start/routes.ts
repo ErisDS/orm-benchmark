@@ -20,6 +20,8 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 import Contact from 'App/Models/Contact'
+import BookshelfContact from '@ioc:Bookshelf/Contact'
+import ObjectionContact from '@ioc:Objection/Contact'
 
 Route.get('/', async () => {
   return { hello: 'world' }
@@ -32,5 +34,18 @@ Route.get('/api/v1/lucid/contacts', async () => {
     .preload('phones')
     .preload('addresses')
 
+  return contacts
+})
+
+Route.get('/api/v1/bookshelf/contacts', async () => {
+  const contacts = await BookshelfContact.forge().fetchAll({
+    withRelated: ['emails', 'phones', 'addresses'],
+  })
+  return contacts
+})
+
+Route.get('/api/v1/objection/contacts', async () => {
+  const contacts = await ObjectionContact.query()
+    .withGraphFetched('[emails, phones, addresses]')
   return contacts
 })
