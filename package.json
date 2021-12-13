@@ -22,6 +22,8 @@
     "@adonisjs/core": "^5.4.2",
     "@adonisjs/lucid": "16.3.2",
     "@adonisjs/repl": "^3.1.7",
+    "autocannon": "^7.5.0",
+    "autocannon-compare": "^0.4.0",
     "bookshelf": "^1.2.0",
     "knex": "^0.95.14",
     "luxon": "^2.1.1",
