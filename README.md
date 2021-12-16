@@ -22,3 +22,27 @@ The `scripts` directory contains a benchmarking script that runs autocannon agai
 - Run `node scripts/benchmark.js` to run the benchmark
 
 TODO: figure out Adonis CLI and make the benchamrk run with `node ace benchmark` :D
+
+## Results
+
+Run on my 2021 MacBook M1 Max
+
+**duration benchmark results:**
+
+Bookshelf:	 81 requests in 20.03s, 83.4 MB read
+Objection:	 360 requests in 20.02s, 390 MB read
+Lucid:		 22 requests in 20.02s, 18.4 MB read
+
+Objection is better than Bookshelf by 367.12%
+Objection is better than Lucid by 2015.73%
+Bookshelf is better than Lucid by 352.93%
+
+**throughput benchmark results:**
+
+Bookshelf:	 100 requests in 30.03s, 110 MB read
+Objection:	 100 requests in 6.01s, 110 MB read
+Lucid:		 100 requests in 109.11s, 108 MB read
+
+Objection is better than Bookshelf by 399.99%
+Objection is better than Lucid by 1740.85%
+Bookshelf is better than Lucid by 268.18%
