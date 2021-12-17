@@ -15,7 +15,7 @@ The `scripts` directory contains a benchmarking script that runs autocannon agai
 
 - Ensure you have Node 16 and Postgres installed locally
 - Clone the repository
-- Copy `.example.env` to `.env` and update with database credentials
+- Copy `.env.example` to `.env` and update with database credentials
 - Run `node ace migration:run` to setup the DB
 - Run `node ace db:seed` to seed the DB with data
 - Run `node ace serve` to start the server

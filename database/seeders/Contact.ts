@@ -8,6 +8,7 @@ export default class ContactSeeder extends BaseSeeder {
       .with('phones', 2)
       .with('emails', 2)
       .with('addresses', 2)
+      .with('events', 1000)
       .createMany(1000)
   }
 }

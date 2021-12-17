@@ -3,6 +3,7 @@ import { BaseModel, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import Phone from 'App/Models/Phone'
 import Address from 'App/Models/Address'
 import Email from 'App/Models/Email'
+import Event from 'App/Models/Event'
 
 export default class Contact extends BaseModel {
   @column({ isPrimary: true })
@@ -25,4 +26,7 @@ export default class Contact extends BaseModel {
 
   @hasMany(() => Email)
   public emails: HasMany<typeof Email>
+
+  @hasMany(() => Event)
+  public events: HasMany<typeof Event>
 }
